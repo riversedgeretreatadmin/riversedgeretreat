@@ -1,2 +1,105 @@
-//Index//
-:)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REPLACE: Update meta description -->
+    <meta name="description" content="Welcome to our beautiful B&B and Event Venue in the UK.">
+    <title>Venue Name | B&B and Events</title>
+    <!-- Links to shared CSS using an absolute path relative to the domain -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Shared Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <!-- REPLACE: Add your actual business name or logo -->
+            <a href="/" class="logo">Venue Name</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/bnb/">Stay With Us</a></li>
+                    <li><a href="/events/">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <!-- REPLACE: Update hero text -->
+                <h1>A Perfect Retreat & Venue</h1>
+                <p>Experience tranquility in our boutique Bed & Breakfast, or host an unforgettable event in our historic grounds.</p>
+                <a href="/bnb/" class="btn">Book a Room</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section">
+            <div class="container text-center">
+                <h2>Welcome to Venue Name</h2>
+                <p style="max-width: 800px; margin: 0 auto;">
+                    <!-- REPLACE: Update intro text -->
+                    Nestled in the heart of the countryside, our venue offers a unique blend of rustic charm and modern luxury. Whether you are looking for a weekend getaway or the perfect backdrop for your special occasion, we provide an unparalleled experience tailored to you.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Preview Section -->
+        <section class="section" style="background-color: var(--color-bg);">
+            <div class="container">
+                <div class="grid">
+                    <!-- B&B Preview -->
+                    <div class="card">
+                        <h3>Stay With Us</h3>
+                        <p>Enjoy our beautifully appointed rooms, featuring luxurious linens, en-suite bathrooms, and a complimentary locally-sourced breakfast.</p>
+                        <a href="/bnb/" class="btn">View Rooms</a>
+                    </div>
+                    <!-- Events Preview -->
+                    <div class="card">
+                        <h3>Upcoming Events</h3>
+                        <p>From seasonal suppers to intimate workshops, discover what's happening at our venue this season.</p>
+                        <a href="/events/" class="btn">See Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <!-- REPLACE: Contact Info -->
+                    <h3>Contact Us</h3>
+                    <p>Email: hello@yourdomain.co.uk<br>
+                    Phone: 01234 567890</p>
+                </div>
+                <div>
+                    <!-- REPLACE: Address Info -->
+                    <h3>Location</h3>
+                    <p>123 Countryside Lane<br>
+                    Village, County<br>
+                    AB12 3CD</p>
+                </div>
+                <div>
+                    <h3>Information</h3>
+                    <p>
+                        <a href="/privacy/">Privacy Policy</a><br>
+                        <a href="/bnb/">Terms & Conditions</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Venue Name. All rights reserved.</p>
+                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
