@@ -1,6 +1,6 @@
 /**
  * events.js
- * Fetches event data from a JSON endpoint (e.g., a published Google Sheet API URL)
+ * Fetches event data from OpenSheet/Google Sheets API
  * and populates the #events-list container.
  */
 
@@ -8,25 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const eventsContainer = document.getElementById("events-list");
     if (!eventsContainer) return;
 
-    // REPLACE: Put your Google Sheets JSON API URL or JSON file URL here.
-    // E.g., if using a published sheet: 'https://opensheet.elk.sh/YOUR_SPREADSHEET_ID/Sheet1'
-    const EVENTS_API_URL = ""; 
+    // REPLACE: Put your actual OpenSheet URL here
+    const EVENTS_API_URL = "https://opensheet.elk.sh/1jfjByYM5YGMjUIOCZpD-Nik7xsfXfRz_vU5XzPQENHk/Sheet1"; 
 
-    // Function to render mock data while you set up your API
+    // Function to render mock data matching your sheet structure
     function renderPlaceholderEvents() {
         const mockData = [
-            { date: "Oct 15, 2026", title: "Autumn Supper Club", description: "A five-course seasonal tasting menu.", link: "#" },
-            { date: "Nov 02, 2026", title: "Floral Design Workshop", description: "Learn to arrange winter botanicals.", link: "#" },
-            { date: "Dec 10, 2026", title: "Winter Solstice Retreat", description: "A day of yoga, meditation, and dining.", link: "#" }
+            {
+                start_date: "08/09/2026",
+                end_date: "11/09/2026",
+                title: "Test Title",
+                description: "This is a test description",
+                stripe_link: "https://www.example.com"
+            }
         ];
         renderEvents(mockData);
     }
 
     // Main fetch function
     async function fetchEvents() {
-        // If no URL is provided, show placeholders
-        if (!EVENTS_API_URL) {
-            console.log("No API URL provided. Loading placeholder events.");
+        if (!EVENTS_API_URL || EVENTS_API_URL.includes("YOUR_SPREADSHEET_ID")) {
+            console.log("No valid API URL provided. Loading placeholder data.");
             renderPlaceholderEvents();
             return;
         }
@@ -36,10 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!response.ok) throw new Error("Network response was not ok");
             
             const data = await response.json();
-            
-            // NOTE: You may need to map your Google Sheet column names here
-            // e.g. const mappedData = data.map(row => ({ title: row['Event Name'], ... }))
-            
             renderEvents(data);
         } catch (error) {
             console.error("Error fetching events:", error);
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Render the HTML for each event
+    // Render the HTML for each event matching your exact key names
     function renderEvents(eventsArray) {
         eventsContainer.innerHTML = ""; // Clear loading message
 
@@ -57,24 +55,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         eventsArray.forEach(event => {
-            // Create DOM elements safely
             const card = document.createElement("div");
             card.className = "card event-card";
 
-            // Expecting data to have: date, title, description, link
-            // Adjust property names based on your Google Sheet columns
+            // Format date string (combine start_date and end_date if both exist)
+            let dateDisplay = escapeHTML(event.start_date || 'TBD');
+            if (event.end_date && event.end_date !== event.start_date) {
+                dateDisplay += ` - ${escapeHTML(event.end_date)}`;
+            }
+
+            // Ensure URLs start with http:// or https:// for external links
+            let rawLink = (event.stripe_link || '').trim();
+            if (rawLink && !rawLink.startsWith('http://') && !rawLink.startsWith('https://')) {
+                rawLink = `https://${rawLink}`;
+            }
+
             card.innerHTML = `
-                <div class="event-date">${escapeHTML(event.date || 'TBD')}</div>
+                <div class="event-date">${dateDisplay}</div>
                 <h3>${escapeHTML(event.title || 'Untitled Event')}</h3>
                 <p>${escapeHTML(event.description || '')}</p>
-                ${event.link ? `<a href="${escapeHTML(event.link)}" class="btn" style="margin-top:1rem;">More Info</a>` : ''}
+                ${rawLink ? `<a href="${escapeHTML(rawLink)}" target="_blank" rel="noopener noreferrer" class="btn" style="margin-top:1rem;">Book Tickets</a>` : ''}
             `;
             
             eventsContainer.appendChild(card);
         });
     }
 
-    // Utility to prevent XSS attacks when injecting data from external sources
+    // Utility to prevent XSS attacks
     function escapeHTML(str) {
         if (!str) return '';
         const div = document.createElement('div');
