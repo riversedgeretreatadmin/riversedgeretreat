@@ -259,3 +259,66 @@ img {
     font-size: 2rem;
   }
 }
+
+/* ==========================================================================
+   Beds24 Responsive Switching
+   ========================================================================== */
+
+/* Desktop view defaults */
+.booking-desktop-view {
+  display: block;
+}
+
+.booking-mobile-view {
+  display: none;
+}
+
+.booking-widget-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-light);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.booking-widget-wrapper iframe {
+  display: block;
+  border: none;
+  min-height: 850px; /* Gives Beds24 enough room to expand room lists without clipping */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hide the cramped iframe completely */
+  .booking-desktop-view {
+    display: none;
+  }
+
+  /* Show the mobile button card */
+  .booking-mobile-view {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .booking-mobile-card {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .btn-block {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .small-print {
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: #888;
+  }
+}
