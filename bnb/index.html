@@ -37,16 +37,27 @@
                 <!-- BEDS 24 WIDGET CONTAINER -->
                 <div class="booking-widget-container">
                     
-                    <!-- ============================================================== -->
-                    <!-- REPLACE: BEDS24 WIDGET EMBED CODE GOES HERE                    -->
-                    <!-- Delete the placeholder text below and paste the HTML/JS script -->
-                    <!-- snippet provided by your Beds24 control panel.                 -->
-                    <!-- ============================================================== -->
-                    
-                    <h3>[ Beds24 Booking Widget Placeholder ]</h3>
-                    <p style="color: #666; font-size: 0.9rem;">
-                        <em>(Paste your Beds24 iframe or script code here directly in GitHub web editor)</em>
-                    </p>
+                        <!-- B&B Booking Section -->
+                <section class="section" id="booking">
+                    <div class="container">
+                        <h2 class="text-center">Check Availability & Book</h2>
+                        <p class="text-center" style="margin-bottom: 32px;">Select your dates below. Minimum 2-night stay.</p>
+                
+                        <!-- Beds24 Responsive Container -->
+                        <div class="booking-widget-wrapper" style="max-width: 900px; margin: 0 auto; min-height: 500px;">
+                            <!-- REPLACE: Swap 'YOUR_PROP_ID' with the actual Beds24 Property ID when ready -->
+                            <iframe 
+                                id="beds24-frame"
+                                src="https://beds24.com/booking2.php?propid=352540&layout=1&theme=modern" 
+                                width="100%" 
+                                height="650" 
+                                frameborder="0" 
+                                style="max-width:100%; border:none; overflow:auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);"
+                                title="Beds24 Booking Calendar">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
 
                 </div>
             </div>
