@@ -295,7 +295,7 @@
   }
   
   .logo {
-    font-size: 1.15rem; /* Reduces size so it fits on a single line */
+    font-size: 1.3rem; /* Reduces size so it fits on a single line */
     letter-spacing: 0.5px; /* Slightly tighter spacing for mobile */
     white-space: nowrap; /* Prevents "RETREAT" from breaking onto a second line */
     display: block;
