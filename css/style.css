@@ -294,6 +294,13 @@
     gap: var(--spacing-sm);
   }
   
+  .logo {
+    font-size: 1.15rem; /* Reduces size so it fits on a single line */
+    letter-spacing: 0.5px; /* Slightly tighter spacing for mobile */
+    white-space: nowrap; /* Prevents "RETREAT" from breaking onto a second line */
+    display: block;
+    width: 100%;
+  }
   .nav-links {
     display: flex;
     flex-direction: row;
