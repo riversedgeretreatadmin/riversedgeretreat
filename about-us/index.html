@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REPLACE: Update meta description -->
+    <meta name="description" content="Discover the story and mission behind our peaceful retreat and B&B.">
+    <title>About Us | Venue Name</title>
+    <!-- Use root-relative path for shared styles across folders -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
+    <!-- Shared Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <!-- REPLACE: Add your actual business name or logo -->
+            <a href="/" class="logo">Venue Name</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../bnb/">B&B</a></li>
+                    <li><a href="../events/">Events</a></li>
+                    <li><a href="../about/">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner / Header -->
+        <section class="hero" style="padding: 60px 0;">
+            <div class="container text-center">
+                <!-- REPLACE: Update headline -->
+                <h1>Our Story & Mission</h1>
+                <p style="max-width: 650px; margin: 0 auto;">A sanctuary built for rest, community, and quiet renewal in the heart of the countryside.</p>
+            </div>
+        </section>
+
+        <!-- Main Narrative Section -->
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2>Welcome to Our Haven</h2>
+                    <p>
+                        <!-- REPLACE: Add your story/vision -->
+                        [Venue Name] was founded with a single purpose: to provide a peaceful space where guests can pause, disconnect from the demands of daily life, and find restorative rest. Nestled within acres of tranquil grounds, our home serves as both an intimate Bed & Breakfast and a welcoming gathering place for meaningful retreats and community workshops.
+                    </p>
+                    <p>
+                        Whether you are staying for a restful weekend away or joining us for a guided event, our focus is on genuine hospitality, simple comfort, and honoring the natural beauty that surrounds us.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values / Features Grid -->
+        <section class="section" style="background-color: var(--color-bg);">
+            <div class="container">
+                <div class="grid">
+                    <!-- Value 1 -->
+                    <div class="card">
+                        <h3>Quiet Rest</h3>
+                        <p>Thoughtfully prepared spaces designed without unnecessary noise or distractions, giving you room to breathe and recharge.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div class="card">
+                        <h3>Heartfelt Hospitality</h3>
+                        <p>Warm, attentive care from our family to yours—from wholesome breakfasts to guidance on exploring the local countryside.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div class="card">
+                        <h3>Community & Purpose</h3>
+                        <p>Dedicated to supporting charitable causes, guided spiritual retreats, and creative gatherings that uplift the community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="section text-center">
+            <div class="container">
+                <h2>Join Us for a Stay</h2>
+                <p style="max-width: 600px; margin: 0 auto 24px;">We would love to welcome you. Explore our rooms or browse our upcoming retreats.</p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="/bnb/" class="btn">View Rooms</a>
+                    <a href="/events/" class="btn" style="background-color: transparent; border: 1px solid currentColor; color: inherit;">Upcoming Retreats</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <!-- REPLACE: Contact Info -->
+                    <h3>Contact Us</h3>
+                    <p>Email: hello@yourdomain.co.uk<br>
+                    Phone: 01234 567890</p>
+                </div>
+                <div>
+                    <!-- REPLACE: Address Info -->
+                    <h3>Location</h3>
+                    <p>123 Countryside Lane<br>
+                    Village, County<br>
+                    AB12 3CD</p>
+                </div>
+                <div>
+                    <h3>Information</h3>
+                    <p>
+                        <a href="/about/">About Us</a><br>
+                        <a href="/privacy/">Privacy Policy</a><br>
+                        <a href="/terms/">Terms & Conditions</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Venue Name. All rights reserved.</p>
+                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
