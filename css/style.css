@@ -286,7 +286,6 @@
      ========================================================================== */
   @media (max-width: 768px) {
     .nav-container {
-      flex-direction: column;
       gap: var(--spacing-md);
       text-align: center;
     }
