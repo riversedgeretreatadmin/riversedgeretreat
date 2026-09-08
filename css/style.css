@@ -285,10 +285,7 @@
      Responsive adjustments
      ========================================================================== */
   @media (max-width: 768px) {
-    .nav-container {
-      gap: var(--spacing-md);
-      text-align: center;
-    }
+
     
     .nav-links {
       flex-direction: column;
