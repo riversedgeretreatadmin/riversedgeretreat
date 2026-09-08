@@ -291,9 +291,11 @@
       text-align: center;
     }
     
-    .nav-links {
-      gap: var(--spacing-sm);
-    }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+  }
     
     .hero {
       padding: 5rem 0;
