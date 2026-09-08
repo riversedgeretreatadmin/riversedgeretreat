@@ -285,9 +285,7 @@
    Responsive adjustments
    ========================================================================== */
 @media (max-width: 768px) {
-  .logo{
-    font-size: 1rem;
-  }
+
 
   .nav-container {
     flex-direction: column;
@@ -332,5 +330,8 @@
   
   .btn-outline {
     margin-left: 0;
+  }
+    .logo{
+    font-size: 1rem;
   }
 }
