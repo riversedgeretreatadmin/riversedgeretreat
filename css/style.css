@@ -12,7 +12,7 @@
     --color-border: #e2e2e2;
     
     /* Updated Fonts */
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Cinzel', serif; /* Or 'Montserrat', 'Cormorant Garamond' */
     --font-body: 'Poppins', sans-serif;
     
     --spacing-sm: 0.5rem;
