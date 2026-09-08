@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book your stay at our boutique B&B.">
-    <title>Stay With Us | Venue Name</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description" content="River's Edge Retreat in Minyrafon, Llanwrda. A beautifully restored rustic B&B and bespoke event venue nestled in the Welsh countryside.">
+    <title>River's Edge Retreat | B&B</title>
+    
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX'); // REPLACE with your actual Property ID
+    </script>
+
+    <!-- Links to shared CSS -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
     <!-- Shared Header -->
     <header class="site-header">
         <div class="container nav-container">
-            <a href="../" class="logo">Venue Name</a>
+            <a href="/" class="logo">River's Edge Retreat</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../bnb/">Stay With Us</a></li>
-                    <li><a href="../events/">Events</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/bnb/">B&B</a></li>
+                    <li><a href="/events/">Events</a></li>
+                    <li><a href="/about-us/">Our Story</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,21 +88,43 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Contact & Links -->
                 <div>
-                    <h3>Contact Us</h3>
-                    <p>Email: hello@yourdomain.co.uk<br>Phone: 01234 567890</p>
+                    <h3 class="footer-title">Get in Touch</h3>
+                    <p>Email: <a href="mailto:contact@riversedgeretreat.co.uk">contact@riversedgeretreat.co.uk</a></p>
+                    
+                    <br>
+                    <h3 class="footer-title">Location</h3>
+                    <p>Minyrafon<br>
+                    Llanwrda, Carmarthenshire<br>
+                    South Wales<br>
+                    SA19 8AH</p>
                 </div>
-                <div>
-                    <h3>Location</h3>
-                    <p>123 Countryside Lane<br>Village, County<br>AB12 3CD</p>
-                </div>
-                <div>
-                    <h3>Information</h3>
-                    <p><a href="/privacy/">Privacy Policy</a></p>
+                
+                <!-- Google Maps Embed -->
+                <div class="footer-map">
+                    <h3 class="footer-title">Find Us</h3>
+                    <!-- REPLACE the src link with your actual Google My Business Map Embed link once you have it -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19830.435773199854!2d-3.8798935!3d51.9613145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486f0a6d0eb0b365%3A0xc3f58e450b73c224!2sLlanwrda!5e0!3m2!1sen!2suk!4v1694180000000!5m2!1sen!2suk" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> Venue Name. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> River's Edge Retreat. All rights reserved.</p>
+                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+                <p class="footer-legal">
+                    <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms & Conditions</a>
+                </p>
             </div>
         </div>
     </footer>
