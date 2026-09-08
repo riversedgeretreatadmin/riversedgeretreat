@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- REPLACE: Update meta description -->
-    <meta name="description" content="Welcome to our beautiful B&B and Event Venue in the UK.">
-    <title>River's Edge Retreat | B&B and Events</title>
-    <!-- Links to shared CSS using an absolute path relative to the domain -->
+    <meta name="description" content="River's Edge Retreat in Minyrafon, Llanwrda. A beautifully restored rustic B&B and bespoke event venue nestled in the Welsh countryside.">
+    <title>River's Edge Retreat | Rustic B&B and Events in Llanwrda</title>
+    
+    <!-- Google Fonts: Playfair Display for headings, Poppins for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX'); // REPLACE with your actual Property ID
+    </script>
+
+    <!-- Links to shared CSS -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -14,14 +28,13 @@
     <!-- Shared Header -->
     <header class="site-header">
         <div class="container nav-container">
-            <!-- REPLACE: Add your actual business name or logo -->
-            <a href="/" class="logo">RIVER'S EDGE RETREAT</a>
+            <a href="/" class="logo">River's Edge Retreat</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/bnb/">Stay With Us</a></li>
-                    <li><a href="/events/">Events</a></li>
-                    <li><a href="/about-us/">About Us</a></li>
+                    <li><a href="/events/">Retreats & Events</a></li>
+                    <li><a href="/about-us/">Our Story</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,41 +44,52 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <!-- REPLACE: Update hero text -->
-                <h1>A Perfect Retreat & Venue</h1>
-                <p>Experience tranquility in our boutique Bed & Breakfast, or host an unforgettable event in our historic grounds.</p>
-                <a href="/bnb/" class="btn">Book a Room</a>
+                <h1>Escape to the Welsh Countryside</h1>
+                <p>Discover tranquility at our thoughtfully restored rustic home in Minyrafon, Llanwrda. The perfect sanctuary for weekend getaways and transformative retreats.</p>
+                <div class="hero-buttons">
+                    <a href="/bnb/" class="btn">Book a Room</a>
+                    <a href="/events/" class="btn btn-outline">View Retreats</a>
+                </div>
             </div>
         </section>
 
         <!-- Introduction Section -->
         <section class="section">
             <div class="container text-center">
-                <h2>Welcome to Venue Name</h2>
+                <h2>Welcome to River's Edge</h2>
                 <p style="max-width: 800px; margin: 0 auto;">
-                    <!-- REPLACE: Update intro text -->
-                    Nestled in the heart of the countryside, our venue offers a unique blend of rustic charm and modern luxury. Whether you are looking for a weekend getaway or the perfect backdrop for your special occasion, we provide an unparalleled experience tailored to you.
+                    Nestled in the lush, rolling hills of South Wales, River's Edge Retreat offers a unique blend of historic rustic charm and modern comfort. Currently offering three beautifully appointed, intimate guest rooms—with plans to expand our haven very soon—we provide an unparalleled, personalized experience. Let the sounds of nature and the warmth of our restored home restore your soul.
                 </p>
             </div>
         </section>
 
-        <!-- Services Preview Section -->
-        <section class="section" style="background-color: var(--color-bg);">
+        <!-- Services / Offerings Section -->
+        <section class="section" style="background-color: var(--color-bg-alt);">
             <div class="container">
                 <div class="grid">
                     <!-- B&B Preview -->
                     <div class="card">
-                        <h3>Stay With Us</h3>
-                        <p>Enjoy our beautifully appointed rooms, featuring luxurious linens, en-suite bathrooms, and a complimentary locally-sourced breakfast.</p>
-                        <a href="./bnb/" class="btn">View Rooms</a>
+                        <h3>Rest & Restore</h3>
+                        <p>Our rustic rooms feature exposed beams, luxurious linens, and stunning views of the Llanwrda countryside. Wake up to a complimentary, locally-sourced Welsh breakfast designed to fuel your day of exploration.</p>
+                        <a href="/bnb/" class="btn">View Our Rooms</a>
                     </div>
                     <!-- Events Preview -->
                     <div class="card">
-                        <h3>Upcoming Events</h3>
-                        <p>From seasonal suppers to intimate workshops, discover what's happening at our venue this season.</p>
-                        <a href="./events/" class="btn">See Schedule</a>
+                        <h3>Transformative Retreats</h3>
+                        <p>We regularly host wellness retreats, seasonal suppers, and intimate workshops. Our dedicated event spaces and holistic approach make River's Edge the ultimate backdrop for your next escape.</p>
+                        <a href="/events/" class="btn">See Upcoming Events</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Area Highlight Section -->
+        <section class="section">
+            <div class="container text-center">
+                <h2>Explore Carmarthenshire</h2>
+                <p style="max-width: 800px; margin: 0 auto; margin-bottom: var(--spacing-lg);">
+                    Located on the edge of the Brecon Beacons, Llanwrda is a gateway to some of the UK's most breathtaking landscapes. From ancient castles and dense woodlands to winding river trails, adventure and serenity await just beyond our doorstep.
+                </p>
             </div>
         </section>
     </main>
@@ -74,30 +98,43 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Contact & Links -->
                 <div>
-                    <!-- REPLACE: Contact Info -->
-                    <h3>Contact Us</h3>
-                    <p>Email: hello@yourdomain.co.uk<br>
-                    Phone: 01234 567890</p>
+                    <h3 class="footer-title">Get in Touch</h3>
+                    <p>Email: <a href="mailto:contact@riversedgeretreat.co.uk">contact@riversedgeretreat.co.uk</a></p>
+                    <p>Phone: +44 (0) 1234 567890 <!-- REPLACE with actual number --></p>
+                    <br>
+                    <h3 class="footer-title">Location</h3>
+                    <p>Minyrafon<br>
+                    Llanwrda, Carmarthenshire<br>
+                    South Wales<br>
+                    SA19 8AH</p>
                 </div>
-                <div>
-                    <!-- REPLACE: Address Info -->
-                    <h3>Location</h3>
-                    <p>123 Countryside Lane<br>
-                    Village, County<br>
-                    AB12 3CD</p>
-                </div>
-                <div>
-                    <h3>Information</h3>
-                    <p>
-                        <a href="/privacy/">Privacy Policy</a><br>
-                        <a href="/bnb/">Terms & Conditions</a>
-                    </p>
+                
+                <!-- Google Maps Embed -->
+                <div class="footer-map">
+                    <h3 class="footer-title">Find Us</h3>
+                    <!-- REPLACE the src link with your actual Google My Business Map Embed link once you have it -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19830.435773199854!2d-3.8798935!3d51.9613145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486f0a6d0eb0b365%3A0xc3f58e450b73c224!2sLlanwrda!5e0!3m2!1sen!2suk!4v1694180000000!5m2!1sen!2suk" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Venue Name. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> River's Edge Retreat. All rights reserved.</p>
                 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+                <p class="footer-legal">
+                    <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms & Conditions</a>
+                </p>
             </div>
         </div>
     </footer>
