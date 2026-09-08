@@ -281,41 +281,52 @@
     margin-top: 5px;
   }
   
-  /* ==========================================================================
-     Responsive adjustments
-     ========================================================================== */
-  @media (max-width: 768px) {
-    .nav-container {
-      flex-direction: column;
-      gap: var(--spacing-md);
-      text-align: center;
-    }
-    
+ /* ==========================================================================
+   Responsive adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+  
   .nav-links {
     display: flex;
-    list-style: none;
-    gap: var(--spacing-lg);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm) var(--spacing-md); /* Reduced spacing to fit tightly on narrow screens */
+    padding: 0;
+    width: 100%;
   }
-    
-    .hero {
-      padding: 5rem 0;
-    }
-    
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-    
-    .footer-grid {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .btn-outline {
-      margin-left: 0;
-    }
+
+  .nav-links a {
+    font-size: 0.85rem; /* Slightly smaller text size to guarantee single-row placement on small devices */
+    white-space: nowrap;
   }
+  
+  .hero {
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-outline {
+    margin-left: 0;
+  }
+}
